@@ -48,16 +48,56 @@
         
         .blog-post {
             background: white;
-            padding: 2rem;
+            padding: 0;
             margin-bottom: 2rem;
-            border-radius: 8px;
+            border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
         }
         
         .blog-post:hover {
             transform: translateY(-4px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        
+        .post-header {
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .post-icon {
+            font-size: 80px;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            flex-shrink: 0;
+        }
+        
+        .icon-api {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .icon-database {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .icon-git {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .post-header-content {
+            flex: 1;
+        }
+        
+        .post-content {
+            padding: 2rem;
         }
         
         .blog-post h2 {
@@ -76,17 +116,28 @@
             margin-bottom: 1rem;
         }
         
-        .read-more {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            margin-top: 0.5rem;
-            transition: color 0.3s ease;
+        .visual-example {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
         }
         
-        .read-more:hover {
-            color: #764ba2;
+        .visual-example strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .example-list {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .example-list li {
+            margin: 0.5rem 0;
         }
         
         .tag {
@@ -112,7 +163,7 @@
             background: white;
             padding: 2rem;
             margin-bottom: 2rem;
-            border-radius: 8px;
+            border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
@@ -121,7 +172,22 @@
                 font-size: 2rem;
             }
             
+            .post-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .post-icon {
+                font-size: 60px;
+                width: 100px;
+                height: 100px;
+            }
+            
             .blog-post {
+                padding: 0;
+            }
+            
+            .post-content {
                 padding: 1.5rem;
             }
         }
@@ -142,54 +208,102 @@
         </section>
         
         <article class="blog-post">
-            <h2>What is an API? Think of it as a Restaurant Menu</h2>
-            <div class="post-meta">📅 December 7, 2025 | ⏱️ 5 min read</div>
-            <p>Have you ever wondered how your weather app gets its data? Or how food delivery apps show you restaurant menus? The answer is APIs - Application Programming Interfaces.</p>
-            <p><strong>The Restaurant Analogy:</strong> Imagine you're at a restaurant. You don't go into the kitchen and cook your own food, right? Instead, you use a menu to see what's available, tell the waiter what you want, and the kitchen prepares it for you. An API works the same way!</p>
-            <p>• The <strong>menu</strong> is like the API documentation (showing what you can request)</p>
-            <p>• The <strong>waiter</strong> is the API itself (taking your request to the kitchen)</p>
-            <p>• The <strong>kitchen</strong> is the server/database (where the actual work happens)</p>
-            <p>• Your <strong>meal</strong> is the data/response you get back</p>
-            <p>When you check the weather on your phone, your app is the customer, the weather service's API is the waiter, and the weather database is the kitchen. The app doesn't need to know HOW the weather data is collected - it just needs to know how to ask for it (through the API).</p>
-            <div>
-                <span class="tag">APIs</span>
-                <span class="tag">Basics</span>
-                <span class="tag">Analogies</span>
+            <div class="post-header">
+                <div class="post-icon icon-api">🍽️</div>
+                <div class="post-header-content">
+                    <h2>What is an API? Think of it as a Restaurant Menu</h2>
+                    <div class="post-meta">📅 December 7, 2025 | ⏱️ 5 min read</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Have you ever wondered how your weather app gets its data? Or how food delivery apps show you restaurant menus? The answer is APIs - Application Programming Interfaces.</p>
+                
+                <div class="visual-example">
+                    <strong>🍴 The Restaurant Analogy:</strong>
+                    <p>Imagine you're at a restaurant. You don't go into the kitchen and cook your own food, right? Instead, you use a menu to see what's available, tell the waiter what you want, and the kitchen prepares it for you. An API works the same way!</p>
+                    <ul class="example-list">
+                        <li>📖 The <strong>menu</strong> is like the API documentation (showing what you can request)</li>
+                        <li>👤 The <strong>waiter</strong> is the API itself (taking your request to the kitchen)</li>
+                        <li>🍳 The <strong>kitchen</strong> is the server/database (where the actual work happens)</li>
+                        <li>🍔 Your <strong>meal</strong> is the data/response you get back</li>
+                    </ul>
+                </div>
+                
+                <p><strong>🌦️ Real-world example:</strong> When you check the weather on your phone, your app is the customer, the weather service's API is the waiter, and the weather database is the kitchen. The app doesn't need to know HOW the weather data is collected - it just needs to know how to ask for it (through the API).</p>
+                <div>
+                    <span class="tag">APIs</span>
+                    <span class="tag">Basics</span>
+                    <span class="tag">Analogies</span>
+                </div>
             </div>
         </article>
         
         <article class="blog-post">
-            <h2>Databases: Your Computer's Filing Cabinet</h2>
-            <div class="post-meta">📅 December 7, 2025 | ⏱️ 4 min read</div>
-            <p>Every app you use - from social media to banking - stores information. But where does all this data go? The answer is databases!</p>
-            <p><strong>Think of it like a library:</strong> A database is like a highly organized library where information is stored in tables (like different sections of the library). Each table has rows (individual books) and columns (information about each book like title, author, year).</p>
-            <p><strong>Real-world example:</strong> When you log into Netflix, here's what happens:</p>
-            <p>1. You enter your email and password</p>
-            <p>2. Netflix checks its database (the filing cabinet) to see if your account exists</p>
-            <p>3. If it matches, it pulls up YOUR specific data - your watch history, preferences, etc.</p>
-            <p>4. Netflix then shows you personalized recommendations based on that stored information</p>
-            <p>Without databases, every time you opened Netflix, it would be like visiting for the first time. You'd have to start from scratch!</p>
-            <div>
-                <span class="tag">Databases</span>
-                <span class="tag">Data Storage</span>
-                <span class="tag">Real-World Examples</span>
+            <div class="post-header">
+                <div class="post-icon icon-database">🗄️</div>
+                <div class="post-header-content">
+                    <h2>Databases: Your Computer's Filing Cabinet</h2>
+                    <div class="post-meta">📅 December 7, 2025 | ⏱️ 4 min read</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Every app you use - from social media to banking - stores information. But where does all this data go? The answer is databases!</p>
+                
+                <div class="visual-example">
+                    <strong>📚 Think of it like a library:</strong>
+                    <p>A database is like a highly organized library where information is stored in tables (like different sections of the library). Each table has rows (individual books) and columns (information about each book like title, author, year).</p>
+                </div>
+                
+                <p><strong>🎬 Real-world example:</strong> When you log into Netflix, here's what happens:</p>
+                <ul class="example-list">
+                    <li>1️⃣ You enter your email and password</li>
+                    <li>2️⃣ Netflix checks its database (the filing cabinet) to see if your account exists</li>
+                    <li>3️⃣ If it matches, it pulls up YOUR specific data - your watch history, preferences, etc.</li>
+                    <li>4️⃣ Netflix then shows you personalized recommendations based on that stored information</li>
+                </ul>
+                
+                <p><strong>💡 The key insight:</strong> Without databases, every time you opened Netflix, it would be like visiting for the first time. You'd have to start from scratch!</p>
+                <div>
+                    <span class="tag">Databases</span>
+                    <span class="tag">Data Storage</span>
+                    <span class="tag">Real-World Examples</span>
+                </div>
             </div>
         </article>
         
         <article class="blog-post">
-            <h2>Version Control (Git): Like Track Changes for Code</h2>
-            <div class="post-meta">📅 December 7, 2025 | ⏱️ 6 min read</div>
-            <p>Ever worked on a document with multiple people and wished you could see who changed what? Or wanted to undo changes from three days ago? That's exactly what version control does for software engineers!</p>
-            <p><strong>The Google Docs Analogy:</strong> Think about collaborating on a Google Doc. You can see the edit history, revert to previous versions, and see who made what changes. Git (and GitHub) does this for code, but with superpowers!</p>
-            <p><strong>Why it matters:</strong> Imagine you're building a house with a team:</p>
-            <p>• Without version control: If someone makes a mistake, you might have to tear down walls to fix it</p>
-            <p>• With version control: You have a "save point" before each change. Made a mistake? Just reload the last save!</p>
-            <p><strong>Real-world scenario:</strong> At 3 PM, you add a new feature to your app and it works great. At 5 PM, you make another change and suddenly everything breaks. With Git, you can travel back in time to 3 PM when everything worked, figure out what went wrong, and fix it properly.</p>
-            <p>This is why tech companies love Git - it lets teams of hundreds of engineers work on the same project without stepping on each other's toes!</p>
-            <div>
-                <span class="tag">Git</span>
-                <span class="tag">Version Control</span>
-                <span class="tag">Collaboration</span>
+            <div class="post-header">
+                <div class="post-icon icon-git">📝</div>
+                <div class="post-header-content">
+                    <h2>Version Control (Git): Like Track Changes for Code</h2>
+                    <div class="post-meta">📅 December 7, 2025 | ⏱️ 6 min read</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>Ever worked on a document with multiple people and wished you could see who changed what? Or wanted to undo changes from three days ago? That's exactly what version control does for software engineers!</p>
+                
+                <div class="visual-example">
+                    <strong>📊 The Google Docs Analogy:</strong>
+                    <p>Think about collaborating on a Google Doc. You can see the edit history, revert to previous versions, and see who made what changes. Git (and GitHub) does this for code, but with superpowers!</p>
+                </div>
+                
+                <p><strong>🏗️ Why it matters:</strong> Imagine you're building a house with a team:</p>
+                <ul class="example-list">
+                    <li>❌ Without version control: If someone makes a mistake, you might have to tear down walls to fix it</li>
+                    <li>✅ With version control: You have a "save point" before each change. Made a mistake? Just reload the last save!</li>
+                </ul>
+                
+                <div class="visual-example">
+                    <strong>⏰ Real-world scenario:</strong>
+                    <p>At 3 PM, you add a new feature to your app and it works great. At 5 PM, you make another change and suddenly everything breaks. With Git, you can travel back in time to 3 PM when everything worked, figure out what went wrong, and fix it properly.</p>
+                </div>
+                
+                <p>This is why tech companies love Git - it lets teams of hundreds of engineers work on the same project without stepping on each other's toes!</p>
+                <div>
+                    <span class="tag">Git</span>
+                    <span class="tag">Version Control</span>
+                    <span class="tag">Collaboration</span>
+                </div>
             </div>
         </article>
     </main>
