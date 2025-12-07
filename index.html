@@ -16,23 +16,80 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dark-mode.css">
     <link rel="stylesheet" href="css/advanced-features.css">
+    <link rel="stylesheet" href="css/landing.css">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <h1>🚀 Tech Made Simple</h1>
-            <p class="tagline">Software Engineering Explained Through Real-World Examples</p>
-            <p class="subtitle">Making complex technical concepts easy to understand</p>
-        </div>
-    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">✨ 50+ Articles & Growing</div>
+            <h1 class="hero-title">Tech Made <span class="gradient-text">Simple</span></h1>
+            <p class="hero-subtitle">Master software engineering through real-world analogies and simple explanations
+            </p>
+            <div class="hero-cta">
+                <a href="#articles" class="btn btn-primary">Explore Articles</a>
+                <a href="rss.xml" class="btn btn-secondary">📡 Subscribe via RSS</a>
+            </div>
 
-    <main class="container">
-        <h2 class="section-title">Latest Articles</h2>
-        <p class="section-subtitle">Click on any article to read more</p>
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Articles</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Illustrations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Free</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Topics -->
+    <section class="featured-topics">
+        <div class="container">
+            <h2 class="section-title">Popular Topics</h2>
+            <div class="topics-grid">
+                <a href="#" class="topic-card" data-category="fundamentals">
+                    <span class="topic-icon">📚</span>
+                    <span class="topic-name">Programming Fundamentals</span>
+                    <span class="topic-count">11 articles</span>
+                </a>
+                <a href="#" class="topic-card" data-category="web">
+                    <span class="topic-icon">🌐</span>
+                    <span class="topic-name">Web Development</span>
+                    <span class="topic-count">12 articles</span>
+                </a>
+                <a href="#" class="topic-card" data-category="devops">
+                    <span class="topic-icon">🚀</span>
+                    <span class="topic-name">DevOps</span>
+                    <span class="topic-count">8 articles</span>
+                </a>
+                <a href="#" class="topic-card" data-category="architecture">
+                    <span class="topic-icon">🏗️</span>
+                    <span class="topic-name">Architecture</span>
+                    <span class="topic-count">11 articles</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container" id="articles">
+        <h2 class="section-title">All Articles</h2>
+        <p class="section-subtitle">Browse, search, and filter through our comprehensive collection</p>
 
         <!-- Search & Filter Section -->
         <div class="search-filter-container">
@@ -974,6 +1031,7 @@
     <script src="js/search-filter.js"></script>
     <script src="js/features.js"></script>
     <script src="js/advanced-features.js"></script>
+    <script src="js/landing.js"></script>
 </body>
 
 </html>
