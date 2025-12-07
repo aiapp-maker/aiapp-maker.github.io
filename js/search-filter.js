@@ -1,13 +1,16 @@
 // Search and Filter Functionality
 const searchInput = document.getElementById('searchInput');
-const blogCards = document.querySelectorAll('.blog-card');
+const blogGrid = document.querySelector('.blog-grid');
+const blogCards = Array.from(document.querySelectorAll('.blog-card'));
 const filterButtons = document.querySelectorAll('.filter-btn');
+const sortSelect = document.getElementById('sortSelect');
 let currentCategory = 'all';
+let currentSort = 'newest';
 
 // Search functionality
 searchInput.addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();
-    filterCards(searchTerm, currentCategory);
+    filterAndSortCards(searchTerm, currentCategory, currentSort);
 });
 
 // Category filter functionality
@@ -20,14 +23,24 @@ filterButtons.forEach(btn => {
         // Update current category
         currentCategory = btn.dataset.category;
         const searchTerm = searchInput.value.toLowerCase();
-        filterCards(searchTerm, currentCategory);
+        filterAndSortCards(searchTerm, currentCategory, currentSort);
     });
 });
 
-// Combined filter function
-function filterCards(searchTerm, category) {
-    let visibleCount = 0;
+// Sort functionality
+if (sortSelect) {
+    sortSelect.addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        const searchTerm = searchInput.value.toLowerCase();
+        filterAndSortCards(searchTerm, currentCategory, currentSort);
+    });
+}
 
+// Combined filter and sort function
+function filterAndSortCards(searchTerm, category, sortBy) {
+    let visibleCards = [];
+
+    // Filter cards
     blogCards.forEach(card => {
         const title = card.querySelector('.card-title').textContent.toLowerCase();
         const description = card.querySelector('.card-description').textContent.toLowerCase();
@@ -42,14 +55,44 @@ function filterCards(searchTerm, category) {
 
         if (matchesSearch && matchesCategory) {
             card.classList.remove('hidden');
-            visibleCount++;
+            visibleCards.push(card);
         } else {
             card.classList.add('hidden');
         }
     });
 
+    // Sort visible cards
+    sortCards(visibleCards, sortBy);
+
     // Show/hide no results message
-    updateNoResultsMessage(visibleCount);
+    updateNoResultsMessage(visibleCards.length);
+}
+
+// Sort cards based on criteria
+function sortCards(cards, sortBy) {
+    const sorted = [...cards].sort((a, b) => {
+        switch (sortBy) {
+            case 'title-asc':
+                return a.querySelector('.card-title').textContent.localeCompare(
+                    b.querySelector('.card-title').textContent
+                );
+            case 'title-desc':
+                return b.querySelector('.card-title').textContent.localeCompare(
+                    a.querySelector('.card-title').textContent
+                );
+            case 'newest':
+            case 'oldest':
+                // For now, maintain current order (can add date metadata later)
+                return 0;
+            default:
+                return 0;
+        }
+    });
+
+    // Reorder in DOM
+    sorted.forEach(card => {
+        blogGrid.appendChild(card);
+    });
 }
 
 // Update no results message
@@ -68,7 +111,7 @@ function updateNoResultsMessage(count) {
                     <p>Try adjusting your search or filter criteria</p>
                 </div>
             `;
-            document.querySelector('.blog-grid').appendChild(noResultsMsg);
+            blogGrid.appendChild(noResultsMsg);
         }
         noResultsMsg.style.display = 'block';
     } else if (noResultsMsg) {
@@ -77,4 +120,4 @@ function updateNoResultsMessage(count) {
 }
 
 // Initialize - show all cards
-filterCards('', 'all');
+filterAndSortCards('', 'all', 'newest');
