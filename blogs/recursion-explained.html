@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion Explained: Think Russian Dolls | Tech Made Simple</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="back-button">← Back to Home</a>
+            <h1>🪆 Recursion: Think Russian Dolls</h1>
+            <p class="post-meta">📅 December 7, 2025 | ⏱️ 5 min read</p>
+        </div>
+    </header>
+    <main class="container">
+        <article>
+            <img src="../images/recursion_illustration_1765093037467.png" alt="Russian nesting dolls"
+                class="hero-image">
+
+            <p>Recursion is when a function calls itself. Think of it as <strong>Russian nesting dolls</strong> - each
+                doll contains a smaller version of itself.</p>
+
+            <div class="example-box">
+                <strong>🪆 The Russian Doll Analogy</strong>
+                <p>Open a Russian doll, find another doll inside. Open that doll, find another smaller one. Keep going
+                    until you reach the smallest doll. Recursion works the same way - a function calls itself with
+                    smaller inputs until it reaches a base case.</p>
+            </div>
+
+            <h2>How Recursion Works</h2>
+            <p>Every recursive function needs two things:</p>
+            <ul>
+                <li>🛑 <strong>Base Case:</strong> When to stop (the smallest doll)</li>
+                <li>🔄 <strong>Recursive Case:</strong> Call itself with smaller input</li>
+            </ul>
+
+            <h2>Simple Example: Countdown</h2>
+            <div class="example-box">
+                <strong>Countdown from 5</strong>
+                <p>countdown(5) → print 5, call countdown(4)<br>
+                    countdown(4) → print 4, call countdown(3)<br>
+                    countdown(3) → print 3, call countdown(2)<br>
+                    countdown(2) → print 2, call countdown(1)<br>
+                    countdown(1) → print 1, STOP (base case)</p>
+            </div>
+
+            <h2>Classic Example: Factorial</h2>
+            <p>Factorial of 5 = 5 × 4 × 3 × 2 × 1 = 120</p>
+            <div class="example-box">
+                <strong>Recursive Thinking</strong>
+                <p>factorial(5) = 5 × factorial(4)<br>
+                    factorial(4) = 4 × factorial(3)<br>
+                    factorial(3) = 3 × factorial(2)<br>
+                    factorial(2) = 2 × factorial(1)<br>
+                    factorial(1) = 1 (base case)</p>
+            </div>
+
+            <h2>Real-World Examples</h2>
+            <ul>
+                <li>📁 <strong>File Systems:</strong> Search folders within folders</li>
+                <li>🌳 <strong>Family Trees:</strong> Find all descendants</li>
+                <li>🔍 <strong>Search:</strong> Binary search in sorted lists</li>
+                <li>🎯 <strong>Sorting:</strong> Merge sort, quick sort</li>
+                <li>🗂️ <strong>JSON:</strong> Parse nested objects</li>
+            </ul>
+
+            <h2>Recursion vs Loops</h2>
+            <p><strong>Loop Approach:</strong> Repeat with counter</p>
+            <p><strong>Recursive Approach:</strong> Break problem into smaller versions</p>
+            <p>Both can solve the same problems, but recursion is elegant for naturally recursive problems!</p>
+
+            <h2>The Danger: Infinite Recursion</h2>
+            <div class="example-box">
+                <strong>⚠️ Warning!</strong>
+                <p>Without a base case, recursion never stops - like Russian dolls that go on forever! Always ensure you
+                    have a stopping condition.</p>
+            </div>
+
+            <h2>When to Use Recursion</h2>
+            <ul>
+                <li>✅ <strong>Tree/Graph Traversal:</strong> Navigate hierarchies</li>
+                <li>✅ <strong>Divide and Conquer:</strong> Break big problems into smaller ones</li>
+                <li>✅ <strong>Backtracking:</strong> Try different paths (mazes, puzzles)</li>
+                <li>❌ <strong>Simple Loops:</strong> Use regular loops instead</li>
+            </ul>
+
+            <h2>The Call Stack</h2>
+            <p>Each recursive call is added to a stack, like stacking plates. When the base case is reached, the stack
+                unwinds, solving each level.</p>
+
+            <p><strong>The bottom line:</strong> Recursion is a powerful technique where a function solves a problem by
+                solving smaller versions of itself. Like Russian dolls, each level contains a smaller version until you
+                reach the base case. It's elegant for certain problems but requires careful design!</p>
+
+            <div class="tags">
+                <span class="tag">Recursion</span>
+                <span class="tag">Advanced Concepts</span>
+                <span class="tag">Algorithms</span>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tech Made Simple. Making software engineering accessible to everyone.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
