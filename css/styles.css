@@ -399,3 +399,123 @@ article li {
         margin-top: -4rem;
     }
 }
+
+/* Search & Filter Styles */
+.search-filter-container {
+    margin: 2rem auto 3rem;
+    max-width: 900px;
+}
+
+.search-box {
+    margin-bottom: 1.5rem;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    background: var(--surface-light);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+#searchInput::placeholder {
+    color: var(--text-light);
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 0.65rem 1.5rem;
+    background: var(--surface-light);
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: var(--font-sans);
+    color: var(--text-muted);
+    box-shadow: var(--shadow-sm);
+}
+
+.filter-btn:hover {
+    background: var(--surface-subtle);
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.blog-card.hidden {
+    display: none;
+}
+
+/* No Results Message */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--surface-light);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.no-results-content {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.no-results-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.no-results h3 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.no-results p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* Responsive adjustments for search/filter */
+@media (max-width: 768px) {
+    .filter-buttons {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    #searchInput {
+        font-size: 0.95rem;
+    }
+}

@@ -24,8 +24,25 @@
         <h2 class="section-title">Latest Articles</h2>
         <p class="section-subtitle">Click on any article to read more</p>
 
+        <!-- Search & Filter Section -->
+        <div class="search-filter-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Search articles by title, topic, or keyword...">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All Topics</button>
+                <button class="filter-btn" data-category="fundamentals">📚 Programming Fundamentals</button>
+                <button class="filter-btn" data-category="web">🌐 Web Development</button>
+                <button class="filter-btn" data-category="data">💾 Data & Databases</button>
+                <button class="filter-btn" data-category="devops">🚀 DevOps</button>
+                <button class="filter-btn" data-category="architecture">🏗️ Architecture</button>
+                <button class="filter-btn" data-category="tools">🛠️ Tools</button>
+            </div>
+        </div>
+
         <div class="blog-grid">
-            <a href="blogs/api-explained.html" class="blog-card">
+            <a href="blogs/api-explained.html" class="blog-card" data-category="architecture"
+                data-tags="api rest web-services communication">
                 <div class="card-thumbnail thumbnail-api">🍽️</div>
                 <div class="card-content">
                     <h3 class="card-title">What is an API? Think Restaurant Menu</h3>
@@ -43,7 +60,8 @@
                 </div>
             </a>
 
-            <a href="blogs/databases-explained.html" class="blog-card">
+            <a href="blogs/databases-explained.html" class="blog-card" data-category="data"
+                data-tags="database sql storage data">
                 <div class="card-thumbnail thumbnail-database">🗄️</div>
                 <div class="card-content">
                     <h3 class="card-title">Databases: Your Computer's Filing Cabinet</h3>
@@ -61,7 +79,8 @@
                 </div>
             </a>
 
-            <a href="blogs/docker-explained.html" class="blog-card">
+            <a href="blogs/docker-explained.html" class="blog-card" data-category="devops"
+                data-tags="docker containers devops deployment">
                 <div class="card-thumbnail thumbnail-docker">🐳</div>
                 <div class="card-content">
                     <h3 class="card-title">Docker: Portable Software Made Simple</h3>
@@ -79,7 +98,8 @@
                 </div>
             </a>
 
-            <a href="blogs/microservices-explained.html" class="blog-card">
+            <a href="blogs/microservices-explained.html" class="blog-card" data-category="architecture"
+                data-tags="microservices architecture scalability">
                 <div class="card-thumbnail thumbnail-microservices">🧩</div>
                 <div class="card-content">
                     <h3 class="card-title">Microservices: Breaking Down the Monolith</h3>
@@ -97,7 +117,8 @@
                 </div>
             </a>
 
-            <a href="blogs/git-explained.html" class="blog-card">
+            <a href="blogs/git-explained.html" class="blog-card" data-category="tools"
+                data-tags="git version-control collaboration">
                 <div class="card-thumbnail thumbnail-git">📝</div>
                 <div class="card-content">
                     <h3 class="card-title">Version Control: Track Changes for Code</h3>
@@ -115,7 +136,8 @@
                 </div>
             </a>
 
-            <a href="blogs/cloud-computing.html" class="blog-card">
+            <a href="blogs/cloud-computing.html" class="blog-card" data-category="devops"
+                data-tags="cloud aws infrastructure hosting">
                 <div class="card-thumbnail thumbnail-cloud">☁️</div>
                 <div class="card-content">
                     <h3 class="card-title">Cloud Computing: Renting vs Buying</h3>
@@ -133,7 +155,8 @@
                 </div>
             </a>
 
-            <a href="blogs/frontend-backend.html" class="blog-card">
+            <a href="blogs/frontend-backend.html" class="blog-card" data-category="web"
+                data-tags="frontend backend web-development">
                 <div class="card-thumbnail thumbnail-frontend">🏠</div>
                 <div class="card-content">
                     <h3 class="card-title">Frontend vs Backend: Restaurant Explained</h3>
@@ -151,7 +174,8 @@
                 </div>
             </a>
 
-            <a href="blogs/algorithms.html" class="blog-card">
+            <a href="blogs/algorithms.html" class="blog-card" data-category="fundamentals"
+                data-tags="algorithms logic problem-solving">
                 <div class="card-thumbnail thumbnail-algorithms">🧮</div>
                 <div class="card-content">
                     <h3 class="card-title">Algorithms: Following a Recipe</h3>
@@ -170,7 +194,8 @@
             </a>
 
             <!-- Programming Fundamentals -->
-            <a href="blogs/variables-explained.html" class="blog-card">
+            <a href="blogs/variables-explained.html" class="blog-card" data-category="fundamentals"
+                data-tags="variables basics programming">
                 <div class="card-thumbnail">📦</div>
                 <div class="card-content">
                     <h3 class="card-title">Variables: Think Storage Boxes</h3>
@@ -188,7 +213,8 @@
                 </div>
             </a>
 
-            <a href="blogs/functions-explained.html" class="blog-card">
+            <a href="blogs/functions-explained.html" class="blog-card" data-category="fundamentals"
+                data-tags="functions code-reusability programming">
                 <div class="card-thumbnail">👨‍🍳</div>
                 <div class="card-content">
                     <h3 class="card-title">Functions: Think Recipe Instructions</h3>
@@ -205,7 +231,8 @@
                 </div>
             </a>
 
-            <a href="blogs/loops-explained.html" class="blog-card">
+            <a href="blogs/loops-explained.html" class="blog-card" data-category="fundamentals"
+                data-tags="loops automation iteration">
                 <div class="card-thumbnail">🔄</div>
                 <div class="card-content">
                     <h3 class="card-title">Loops: Think Assembly Line</h3>
@@ -222,7 +249,8 @@
                 </div>
             </a>
 
-            <a href="blogs/conditionals-explained.html" class="blog-card">
+            <a href="blogs/conditionals-explained.html" class="blog-card" data-category="fundamentals"
+                data-tags="conditionals if-else logic">
                 <div class="card-thumbnail">🚦</div>
                 <div class="card-content">
                     <h3 class="card-title">Conditionals: Think Traffic Lights</h3>
@@ -239,7 +267,8 @@
                 </div>
             </a>
 
-            <a href="blogs/arrays-explained.html" class="blog-card">
+            <a href="blogs/arrays-explained.html" class="blog-card" data-category="fundamentals"
+                data-tags="arrays data-structures lists">
                 <div class="card-thumbnail">🥚</div>
                 <div class="card-content">
                     <h3 class="card-title">Arrays: Think Egg Cartons</h3>
@@ -256,7 +285,8 @@
                 </div>
             </a>
 
-            <a href="blogs/objects-explained.html" class="blog-card">
+            <a href="blogs/objects-explained.html" class="blog-card" data-category="fundamentals"
+                data-tags="objects oop data-structures">
                 <div class="card-thumbnail">📁</div>
                 <div class="card-content">
                     <h3 class="card-title">Objects: Think Filing Folders</h3>
@@ -273,7 +303,8 @@
                 </div>
             </a>
 
-            <a href="blogs/classes-explained.html" class="blog-card">
+            <a href="blogs/classes-explained.html" class="blog-card" data-category="fundamentals"
+                data-tags="classes oop templates">
                 <div class="card-thumbnail">🍪</div>
                 <div class="card-content">
                     <h3 class="card-title">Classes: Think Cookie Cutters</h3>
@@ -290,7 +321,8 @@
                 </div>
             </a>
 
-            <a href="blogs/debugging-explained.html" class="blog-card">
+            <a href="blogs/debugging-explained.html" class="blog-card" data-category="tools"
+                data-tags="debugging problem-solving development">
                 <div class="card-thumbnail">🔍</div>
                 <div class="card-content">
                     <h3 class="card-title">Debugging: Think Detective Work</h3>
@@ -307,7 +339,8 @@
                 </div>
             </a>
 
-            <a href="blogs/datatypes-explained.html" class="blog-card">
+            <a href="blogs/datatypes-explained.html" class="blog-card" data-category="fundamentals"
+                data-tags="data-types variables fundamentals">
                 <div class="card-thumbnail">📦</div>
                 <div class="card-content">
                     <h3 class="card-title">Data Types: Think Containers</h3>
@@ -324,7 +357,8 @@
                 </div>
             </a>
 
-            <a href="blogs/recursion-explained.html" class="blog-card">
+            <a href="blogs/recursion-explained.html" class="blog-card" data-category="fundamentals"
+                data-tags="recursion advanced algorithms">
                 <div class="card-thumbnail">🪆</div>
                 <div class="card-content">
                     <h3 class="card-title">Recursion: Think Russian Dolls</h3>
@@ -342,7 +376,8 @@
             </a>
 
             <!-- Web Development -->
-            <a href="blogs/html-explained.html" class="blog-card">
+            <a href="blogs/html-explained.html" class="blog-card" data-category="web"
+                data-tags="html web-development markup">
                 <div class="card-thumbnail">🧱</div>
                 <div class="card-content">
                     <h3 class="card-title">HTML: Think Building Blocks</h3>
@@ -359,7 +394,7 @@
                 </div>
             </a>
 
-            <a href="blogs/css-explained.html" class="blog-card">
+            <a href="blogs/css-explained.html" class="blog-card" data-category="web" data-tags="css styling web-design">
                 <div class="card-thumbnail">🎨</div>
                 <div class="card-content">
                     <h3 class="card-title">CSS: Think Interior Design</h3>
@@ -376,7 +411,8 @@
                 </div>
             </a>
 
-            <a href="blogs/javascript-explained.html" class="blog-card">
+            <a href="blogs/javascript-explained.html" class="blog-card" data-category="web"
+                data-tags="javascript programming interactivity">
                 <div class="card-thumbnail">📺</div>
                 <div class="card-content">
                     <h3 class="card-title">JavaScript: Think Remote Control</h3>
@@ -393,7 +429,8 @@
                 </div>
             </a>
 
-            <a href="blogs/responsive-explained.html" class="blog-card">
+            <a href="blogs/responsive-explained.html" class="blog-card" data-category="web"
+                data-tags="responsive mobile web-design">
                 <div class="card-thumbnail">📱</div>
                 <div class="card-content">
                     <h3 class="card-title">Responsive Design: Think Flexible Furniture</h3>
@@ -410,7 +447,8 @@
                 </div>
             </a>
 
-            <a href="blogs/dom-explained.html" class="blog-card">
+            <a href="blogs/dom-explained.html" class="blog-card" data-category="web"
+                data-tags="dom javascript web-development">
                 <div class="card-thumbnail">🌳</div>
                 <div class="card-content">
                     <h3 class="card-title">DOM: Think Family Tree</h3>
@@ -427,7 +465,8 @@
                 </div>
             </a>
 
-            <a href="blogs/events-explained.html" class="blog-card">
+            <a href="blogs/events-explained.html" class="blog-card" data-category="web"
+                data-tags="events javascript interactivity">
                 <div class="card-thumbnail">🔔</div>
                 <div class="card-content">
                     <h3 class="card-title">Events: Think Doorbells</h3>
@@ -444,7 +483,8 @@
                 </div>
             </a>
 
-            <a href="blogs/cookies-explained.html" class="blog-card">
+            <a href="blogs/cookies-explained.html" class="blog-card" data-category="web"
+                data-tags="cookies privacy web-storage">
                 <div class="card-thumbnail">🍪</div>
                 <div class="card-content">
                     <h3 class="card-title">Cookies: Think Name Tags</h3>
@@ -460,7 +500,8 @@
                 </div>
             </a>
 
-            <a href="blogs/rest-explained.html" class="blog-card">
+            <a href="blogs/rest-explained.html" class="blog-card" data-category="architecture"
+                data-tags="rest api web-services">
                 <div class="card-thumbnail">🍽️</div>
                 <div class="card-content">
                     <h3 class="card-title">REST APIs: Think Restaurant Orders</h3>
@@ -476,7 +517,8 @@
                 </div>
             </a>
 
-            <a href="blogs/ajax-explained.html" class="blog-card">
+            <a href="blogs/ajax-explained.html" class="blog-card" data-category="web"
+                data-tags="ajax asynchronous javascript">
                 <div class="card-thumbnail">💬</div>
                 <div class="card-content">
                     <h3 class="card-title">AJAX: Think Instant Messaging</h3>
@@ -493,7 +535,8 @@
                 </div>
             </a>
 
-            <a href="blogs/frameworks-explained.html" class="blog-card">
+            <a href="blogs/frameworks-explained.html" class="blog-card" data-category="web"
+                data-tags="frameworks productivity development-tools">
                 <div class="card-thumbnail">🛠️</div>
                 <div class="card-content">
                     <h3 class="card-title">Frameworks: Think IKEA Kits</h3>
@@ -509,6 +552,114 @@
                     </div>
                 </div>
             </a>
+
+            <!-- Data & Databases -->
+            <a href="blogs/sql-explained.html" class="blog-card" data-category="data" data-tags="sql databases queries">
+                <div class="card-thumbnail">📚</div>
+                <div class="card-content">
+                    <h3 class="card-title">SQL: Think Library Catalog</h3>
+                    <p class="card-description">Query databases with SQL. Like searching a library catalog to find
+                        exactly what you need!</p>
+                    <div class="card-meta">
+                        <span>📅 December 7, 2025</span>
+                        <span>⏱️ 5 min read</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">Databases</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="blogs/nosql-explained.html" class="blog-card" data-category="data"
+                data-tags="nosql databases mongodb">
+                <div class="card-thumbnail">🗂️</div>
+                <div class="card-content">
+                    <h3 class="card-title">NoSQL: Think Flexible Storage</h3>
+                    <p class="card-description">Modern databases without strict schemas. Flexible storage for varied
+                        data!</p>
+                    <div class="card-meta">
+                        <span>📅 December 7, 2025</span>
+                        <span>⏱️ 5 min read</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">NoSQL</span>
+                        <span class="tag">Scalability</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- DevOps -->
+            <a href="blogs/kubernetes-explained.html" class="blog-card" data-category="devops"
+                data-tags="kubernetes containers orchestration">
+                <div class="card-thumbnail">🎼</div>
+                <div class="card-content">
+                    <h3 class="card-title">Kubernetes: Think Orchestra Conductor</h3>
+                    <p class="card-description">Manage containers at scale. Like a conductor coordinating an orchestra!
+                    </p>
+                    <div class="card-meta">
+                        <span>📅 December 7, 2025</span>
+                        <span>⏱️ 6 min read</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">DevOps</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="blogs/cicd-explained.html" class="blog-card" data-category="devops"
+                data-tags="cicd automation deployment">
+                <div class="card-thumbnail">🏭</div>
+                <div class="card-content">
+                    <h3 class="card-title">CI/CD: Think Assembly Line Quality Control</h3>
+                    <p class="card-description">Automate testing and deployment. Like a quality-controlled assembly
+                        line!</p>
+                    <div class="card-meta">
+                        <span>📅 December 7, 2025</span>
+                        <span>⏱️ 5 min read</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Architecture & Tools -->
+            <a href="blogs/authentication-explained.html" class="blog-card" data-category="architecture"
+                data-tags="authentication security login">
+                <div class="card-thumbnail">🪪</div>
+                <div class="card-content">
+                    <h3 class="card-title">Authentication: Think ID Badge</h3>
+                    <p class="card-description">Verify user identity. Like showing an ID badge to enter a building!</p>
+                    <div class="card-meta">
+                        <span>📅 December 7, 2025</span>
+                        <span>⏱️ 5 min read</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">Authentication</span>
+                        <span class="tag">Security</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="blogs/testing-explained.html" class="blog-card" data-category="tools"
+                data-tags="testing quality development">
+                <div class="card-thumbnail">👨‍🍳</div>
+                <div class="card-content">
+                    <h3 class="card-title">Testing: Think Taste Testing</h3>
+                    <p class="card-description">Ensure code quality with tests. Like a chef tasting before serving!</p>
+                    <div class="card-meta">
+                        <span>📅 December 7, 2025</span>
+                        <span>⏱️ 5 min read</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">Testing</span>
+                        <span class="tag">Quality</span>
+                    </div>
+                </div>
+            </a>
         </div>
     </main>
 
@@ -518,6 +669,7 @@
             <p>Built with ❤️ for curious minds | Hosted on GitHub Pages</p>
         </div>
     </footer>
+    <script src="js/search-filter.js"></script>
 </body>
 
 </html>

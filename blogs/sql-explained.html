@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Explained: Think Library Catalog | Tech Made Simple</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="back-button">← Back to Home</a>
+            <h1>📚 SQL: Think Library Catalog</h1>
+            <p class="post-meta">📅 December 7, 2025 | ⏱️ 5 min read</p>
+        </div>
+    </header>
+    <main class="container">
+        <article>
+            <div class="hero-icon">📚</div>
+
+            <p>SQL (Structured Query Language) is how you ask databases for information. Think of it as
+                <strong>searching a library catalog</strong> - you ask questions to find exactly what you need.</p>
+
+            <div class="example-box">
+                <strong>📚 The Library Catalog Analogy</strong>
+                <p>When you search a library catalog, you might ask "Show me all mystery books by Agatha Christie
+                    published after 1950." SQL works the same way - you write queries to find specific data in your
+                    database.</p>
+            </div>
+
+            <h2>Basic SQL Commands</h2>
+            <ul>
+                <li>📖 <strong>SELECT:</strong> "Show me..." (retrieve data)</li>
+                <li>➕ <strong>INSERT:</strong> "Add this..." (create new data)</li>
+                <li>✏️ <strong>UPDATE:</strong> "Change this..." (modify data)</li>
+                <li>❌ <strong>DELETE:</strong> "Remove this..." (delete data)</li>
+            </ul>
+
+            <h2>SELECT - The Most Common Query</h2>
+            <div class="example-box">
+                <strong>Example: Find All Users</strong>
+                <p>SELECT * FROM users;<br>
+                    Translation: "Show me everything from the users table"</p>
+            </div>
+
+            <h2>Filtering with WHERE</h2>
+            <p>Add conditions to narrow down results:</p>
+            <div class="example-box">
+                <strong>Example: Find Active Users</strong>
+                <p>SELECT * FROM users WHERE status = 'active';<br>
+                    Translation: "Show me users who are active"</p>
+            </div>
+
+            <h2>Real-World Examples</h2>
+            <ul>
+                <li>🛒 <strong>E-commerce:</strong> Find all orders over $100</li>
+                <li>📱 <strong>Social Media:</strong> Get posts from last week</li>
+                <li>🏦 <strong>Banking:</strong> List transactions for an account</li>
+                <li>📧 <strong>Email:</strong> Find unread messages</li>
+            </ul>
+
+            <h2>Joining Tables</h2>
+            <p>Combine data from multiple tables:</p>
+            <div class="example-box">
+                <strong>Example: Users and Their Orders</strong>
+                <p>Like connecting library books with their authors - you can link related information together.</p>
+            </div>
+
+            <h2>Common SQL Operations</h2>
+            <ul>
+                <li>🔢 <strong>COUNT:</strong> How many items?</li>
+                <li>📊 <strong>SUM:</strong> Add up values</li>
+                <li>📈 <strong>AVG:</strong> Calculate average</li>
+                <li>🔝 <strong>ORDER BY:</strong> Sort results</li>
+                <li>🎯 <strong>GROUP BY:</strong> Organize by category</li>
+            </ul>
+
+            <p><strong>The bottom line:</strong> SQL is the universal language for talking to databases. Just like
+                asking a librarian for specific books, SQL lets you ask databases for exactly the data you need!</p>
+
+            <div class="tags">
+                <span class="tag">SQL</span>
+                <span class="tag">Databases</span>
+                <span class="tag">Queries</span>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tech Made Simple. Making software engineering accessible to everyone.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
