@@ -15,6 +15,11 @@
     --text-muted: #64748b;
     --text-light: #94a3b8;
     --border-color: #e2e8f0;
+    
+    /* Background Colors */
+    --bg-main: #ffffff;
+    --bg-secondary: #f8fafc;
+    --card-shadow: rgba(0, 0, 0, 0.1);
 
     /* Semantic Colors (for tags/thumbnails) */
     --color-api: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
