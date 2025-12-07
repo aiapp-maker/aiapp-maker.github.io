@@ -22,8 +22,9 @@
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 2rem 0;
+            padding: 3rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
         }
         
         .container {
@@ -33,122 +34,119 @@
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 0.5rem;
         }
         
         .tagline {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.85;
         }
         
         main {
-            padding: 3rem 0;
+            padding: 4rem 0;
         }
         
-        .blog-post {
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .blog-card {
             background: white;
-            padding: 0;
-            margin-bottom: 2rem;
             border-radius: 12px;
+            overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
         
-        .blog-post:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
         }
         
-        .post-header {
-            padding: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            border-bottom: 2px solid #f0f0f0;
-        }
-        
-        .post-icon {
-            font-size: 80px;
-            width: 120px;
-            height: 120px;
+        .card-thumbnail {
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 20px;
-            flex-shrink: 0;
+            font-size: 80px;
+            position: relative;
+            overflow: hidden;
         }
         
-        .icon-api {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
+        .thumbnail-api { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .thumbnail-database { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .thumbnail-git { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .thumbnail-cloud { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .thumbnail-frontend { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .thumbnail-algorithms { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
         
-        .icon-database {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-        
-        .icon-git {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-        
-        .post-header-content {
-            flex: 1;
-        }
-        
-        .post-content {
-            padding: 2rem;
-        }
-        
-        .blog-post h2 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
-            font-size: 1.8rem;
-        }
-        
-        .post-meta {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .blog-post p {
-            margin-bottom: 1rem;
-        }
-        
-        .visual-example {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
+        .card-content {
             padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 8px;
         }
         
-        .visual-example strong {
+        .card-title {
+            font-size: 1.5rem;
             color: #667eea;
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
         }
         
-        .example-list {
-            margin: 1rem 0;
-            padding-left: 1.5rem;
+        .card-description {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
         }
         
-        .example-list li {
-            margin: 0.5rem 0;
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #999;
+            font-size: 0.85rem;
+        }
+        
+        .card-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
         }
         
         .tag {
-            display: inline-block;
             background: #e8eaf6;
             color: #667eea;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
-            font-size: 0.85rem;
-            margin-right: 0.5rem;
-            margin-top: 0.5rem;
+            font-size: 0.75rem;
         }
         
         footer {
@@ -159,36 +157,14 @@
             margin-top: 3rem;
         }
         
-        .about-section {
-            background: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
             }
             
-            .post-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .post-icon {
-                font-size: 60px;
-                width: 100px;
-                height: 100px;
-            }
-            
-            .blog-post {
-                padding: 0;
-            }
-            
-            .post-content {
-                padding: 1.5rem;
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
         }
     </style>
@@ -198,114 +174,117 @@
         <div class="container">
             <h1>🚀 Tech Made Simple</h1>
             <p class="tagline">Software Engineering Explained Through Real-World Examples</p>
+            <p class="subtitle">Making complex technical concepts easy to understand</p>
         </div>
     </header>
     
     <main class="container">
-        <section class="about-section">
-            <h2>Welcome to Tech Made Simple!</h2>
-            <p>Ever wondered what software engineers actually do? We break down complex technical concepts using everyday analogies and real-world examples that anyone can understand. Whether you're curious about how apps work, interested in a tech career, or just want to understand the digital world better, you're in the right place!</p>
-        </section>
+        <h2 class="section-title">Latest Articles</h2>
+        <p class="section-subtitle">Click on any article to read more</p>
         
-        <article class="blog-post">
-            <div class="post-header">
-                <div class="post-icon icon-api">🍽️</div>
-                <div class="post-header-content">
-                    <h2>What is an API? Think of it as a Restaurant Menu</h2>
-                    <div class="post-meta">📅 December 7, 2025 | ⏱️ 5 min read</div>
+        <div class="blog-grid">
+            <a href="blogs/api-explained.html" class="blog-card">
+                <div class="card-thumbnail thumbnail-api">🍽️</div>
+                <div class="card-content">
+                    <h3 class="card-title">What is an API? Think Restaurant Menu</h3>
+                    <p class="card-description">Ever wondered how your weather app gets its data? Learn about APIs through a simple restaurant analogy that makes perfect sense.</p>
+                    <div class="card-meta">
+                        <span>📅 December 7, 2025</span>
+                        <span>⏱️ 5 min read</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">APIs</span>
+                        <span class="tag">Basics</span>
+                        <span class="tag">Analogies</span>
+                    </div>
                 </div>
-            </div>
-            <div class="post-content">
-                <p>Have you ever wondered how your weather app gets its data? Or how food delivery apps show you restaurant menus? The answer is APIs - Application Programming Interfaces.</p>
-                
-                <div class="visual-example">
-                    <strong>🍴 The Restaurant Analogy:</strong>
-                    <p>Imagine you're at a restaurant. You don't go into the kitchen and cook your own food, right? Instead, you use a menu to see what's available, tell the waiter what you want, and the kitchen prepares it for you. An API works the same way!</p>
-                    <ul class="example-list">
-                        <li>📖 The <strong>menu</strong> is like the API documentation (showing what you can request)</li>
-                        <li>👤 The <strong>waiter</strong> is the API itself (taking your request to the kitchen)</li>
-                        <li>🍳 The <strong>kitchen</strong> is the server/database (where the actual work happens)</li>
-                        <li>🍔 Your <strong>meal</strong> is the data/response you get back</li>
-                    </ul>
+            </a>
+            
+            <a href="blogs/databases-explained.html" class="blog-card">
+                <div class="card-thumbnail thumbnail-database">🗄️</div>
+                <div class="card-content">
+                    <h3 class="card-title">Databases: Your Computer's Filing Cabinet</h3>
+                    <p class="card-description">Where does all your data go? Discover how databases work using the analogy of a highly organized library.</p>
+                    <div class="card-meta">
+                        <span>📅 December 7, 2025</span>
+                        <span>⏱️ 4 min read</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">Databases</span>
+                        <span class="tag">Data Storage</span>
+                        <span class="tag">Examples</span>
+                    </div>
                 </div>
-                
-                <p><strong>🌦️ Real-world example:</strong> When you check the weather on your phone, your app is the customer, the weather service's API is the waiter, and the weather database is the kitchen. The app doesn't need to know HOW the weather data is collected - it just needs to know how to ask for it (through the API).</p>
-                <div>
-                    <span class="tag">APIs</span>
-                    <span class="tag">Basics</span>
-                    <span class="tag">Analogies</span>
+            </a>
+            
+            <a href="blogs/git-explained.html" class="blog-card">
+                <div class="card-thumbnail thumbnail-git">📝</div>
+                <div class="card-content">
+                    <h3 class="card-title">Version Control: Track Changes for Code</h3>
+                    <p class="card-description">How do teams of engineers work together without chaos? Learn about Git through the Google Docs analogy.</p>
+                    <div class="card-meta">
+                        <span>📅 December 7, 2025</span>
+                        <span>⏱️ 6 min read</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">Version Control</span>
+                        <span class="tag">Collaboration</span>
+                    </div>
                 </div>
-            </div>
-        </article>
-        
-        <article class="blog-post">
-            <div class="post-header">
-                <div class="post-icon icon-database">🗄️</div>
-                <div class="post-header-content">
-                    <h2>Databases: Your Computer's Filing Cabinet</h2>
-                    <div class="post-meta">📅 December 7, 2025 | ⏱️ 4 min read</div>
+            </a>
+            
+            <a href="blogs/cloud-computing.html" class="blog-card">
+                <div class="card-thumbnail thumbnail-cloud">☁️</div>
+                <div class="card-content">
+                    <h3 class="card-title">Cloud Computing: Renting vs Buying</h3>
+                    <p class="card-description">What is "the cloud" really? Understand cloud computing through the simple analogy of renting an apartment instead of buying a house.</p>
+                    <div class="card-meta">
+                        <span>📅 December 7, 2025</span>
+                        <span>⏱️ 5 min read</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">Cloud</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Infrastructure</span>
+                    </div>
                 </div>
-            </div>
-            <div class="post-content">
-                <p>Every app you use - from social media to banking - stores information. But where does all this data go? The answer is databases!</p>
-                
-                <div class="visual-example">
-                    <strong>📚 Think of it like a library:</strong>
-                    <p>A database is like a highly organized library where information is stored in tables (like different sections of the library). Each table has rows (individual books) and columns (information about each book like title, author, year).</p>
+            </a>
+            
+            <a href="blogs/frontend-backend.html" class="blog-card">
+                <div class="card-thumbnail thumbnail-frontend">🏠</div>
+                <div class="card-content">
+                    <h3 class="card-title">Frontend vs Backend: Restaurant Explained</h3>
+                    <p class="card-description">What's the difference between frontend and backend development? Think of a restaurant - what you see vs what happens in the kitchen.</p>
+                    <div class="card-meta">
+                        <span>📅 December 7, 2025</span>
+                        <span>⏱️ 5 min read</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">Frontend</span>
+                        <span class="tag">Backend</span>
+                        <span class="tag">Web Dev</span>
+                    </div>
                 </div>
-                
-                <p><strong>🎬 Real-world example:</strong> When you log into Netflix, here's what happens:</p>
-                <ul class="example-list">
-                    <li>1️⃣ You enter your email and password</li>
-                    <li>2️⃣ Netflix checks its database (the filing cabinet) to see if your account exists</li>
-                    <li>3️⃣ If it matches, it pulls up YOUR specific data - your watch history, preferences, etc.</li>
-                    <li>4️⃣ Netflix then shows you personalized recommendations based on that stored information</li>
-                </ul>
-                
-                <p><strong>💡 The key insight:</strong> Without databases, every time you opened Netflix, it would be like visiting for the first time. You'd have to start from scratch!</p>
-                <div>
-                    <span class="tag">Databases</span>
-                    <span class="tag">Data Storage</span>
-                    <span class="tag">Real-World Examples</span>
+            </a>
+            
+            <a href="blogs/algorithms.html" class="blog-card">
+                <div class="card-thumbnail thumbnail-algorithms">🧮</div>
+                <div class="card-content">
+                    <h3 class="card-title">Algorithms: Following a Recipe</h3>
+                    <p class="card-description">Algorithms sound scary, but they're just step-by-step instructions - like following a recipe to bake a cake.</p>
+                    <div class="card-meta">
+                        <span>📅 December 7, 2025</span>
+                        <span>⏱️ 6 min read</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag">Algorithms</span>
+                        <span class="tag">Logic</span>
+                        <span class="tag">Problem Solving</span>
+                    </div>
                 </div>
-            </div>
-        </article>
-        
-        <article class="blog-post">
-            <div class="post-header">
-                <div class="post-icon icon-git">📝</div>
-                <div class="post-header-content">
-                    <h2>Version Control (Git): Like Track Changes for Code</h2>
-                    <div class="post-meta">📅 December 7, 2025 | ⏱️ 6 min read</div>
-                </div>
-            </div>
-            <div class="post-content">
-                <p>Ever worked on a document with multiple people and wished you could see who changed what? Or wanted to undo changes from three days ago? That's exactly what version control does for software engineers!</p>
-                
-                <div class="visual-example">
-                    <strong>📊 The Google Docs Analogy:</strong>
-                    <p>Think about collaborating on a Google Doc. You can see the edit history, revert to previous versions, and see who made what changes. Git (and GitHub) does this for code, but with superpowers!</p>
-                </div>
-                
-                <p><strong>🏗️ Why it matters:</strong> Imagine you're building a house with a team:</p>
-                <ul class="example-list">
-                    <li>❌ Without version control: If someone makes a mistake, you might have to tear down walls to fix it</li>
-                    <li>✅ With version control: You have a "save point" before each change. Made a mistake? Just reload the last save!</li>
-                </ul>
-                
-                <div class="visual-example">
-                    <strong>⏰ Real-world scenario:</strong>
-                    <p>At 3 PM, you add a new feature to your app and it works great. At 5 PM, you make another change and suddenly everything breaks. With Git, you can travel back in time to 3 PM when everything worked, figure out what went wrong, and fix it properly.</p>
-                </div>
-                
-                <p>This is why tech companies love Git - it lets teams of hundreds of engineers work on the same project without stepping on each other's toes!</p>
-                <div>
-                    <span class="tag">Git</span>
-                    <span class="tag">Version Control</span>
-                    <span class="tag">Collaboration</span>
-                </div>
-            </div>
-        </article>
+            </a>
+        </div>
     </main>
     
     <footer>
