@@ -7,6 +7,7 @@
     <title>GraphQL Explained: Think Custom Menu | Tech Made Simple</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
 </head>
 
 <body>
@@ -100,6 +101,16 @@
                 <span class="tag">APIs</span>
                 <span class="tag">Query Language</span>
             </div>
+
+            <!-- Share Buttons -->
+            <div class="share-buttons">
+                <span class="share-buttons-label">Share this article:</span>
+                <button class="share-btn twitter" onclick="shareOnTwitter()">🐦 Twitter</button>
+                <button class="share-btn facebook" onclick="shareOnFacebook()">📘 Facebook</button>
+                <button class="share-btn linkedin" onclick="shareOnLinkedIn()">💼 LinkedIn</button>
+                <button class="share-btn reddit" onclick="shareOnReddit()">🔴 Reddit</button>
+                <button class="share-btn copy" onclick="copyLink()">🔗 Copy Link</button>
+            </div>
         </article>
     </main>
     <footer>
@@ -107,6 +118,11 @@
             <p>&copy; 2025 Tech Made Simple. Making software engineering accessible to everyone.</p>
         </div>
     </footer>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
+    <script src="../js/features.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech Made Simple</title>
+    <link>https://tech-explained.github.io</link>
+    <description>Making software engineering accessible to everyone. Learn complex tech concepts through simple, relatable analogies.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Dec 2025 16:45:00 -0500</lastBuildDate>
+    <atom:link href="https://tech-explained.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Webhooks: Think Doorbell Notification</title>
+      <link>https://tech-explained.github.io/blogs/webhooks-explained.html</link>
+      <description>Webhooks send automatic notifications when events happen. Think of them as a doorbell - rings when someone arrives, you don't check constantly.</description>
+      <pubDate>Sat, 07 Dec 2025 16:00:00 -0500</pubDate>
+      <guid>https://tech-explained.github.io/blogs/webhooks-explained.html</guid>
+    </item>
+    
+    <item>
+      <title>Environment Variables: Think Settings File</title>
+      <link>https://tech-explained.github.io/blogs/envvars-explained.html</link>
+      <description>Environment variables store configuration outside your code. Think of them as a settings file - change settings without changing code.</description>
+      <pubDate>Sat, 07 Dec 2025 15:55:00 -0500</pubDate>
+      <guid>https://tech-explained.github.io/blogs/envvars-explained.html</guid>
+    </item>
+    
+    <item>
+      <title>Regex: Think Find and Replace</title>
+      <link>https://tech-explained.github.io/blogs/regex-explained.html</link>
+      <description>Regular Expressions (Regex) are patterns for finding text. Think of them as super-powered find and replace - search for patterns, not just exact matches.</description>
+      <pubDate>Sat, 07 Dec 2025 15:50:00 -0500</pubDate>
+      <guid>https://tech-explained.github.io/blogs/regex-explained.html</guid>
+    </item>
+    
+    <item>
+      <title>Serverless: Think Food Delivery</title>
+      <link>https://tech-explained.github.io/blogs/serverless-explained.html</link>
+      <description>Serverless means you don't manage servers. Think of it as food delivery - you don't own a restaurant, just order when hungry.</description>
+      <pubDate>Sat, 07 Dec 2025 15:45:00 -0500</pubDate>
+      <guid>https://tech-explained.github.io/blogs/serverless-explained.html</guid>
+    </item>
+    
+    <item>
+      <title>TypeScript: Think Spell Checker</title>
+      <link>https://tech-explained.github.io/blogs/typescript-explained.html</link>
+      <description>TypeScript adds type checking to JavaScript. Think of it as a spell checker - catches mistakes before you publish.</description>
+      <pubDate>Sat, 07 Dec 2025 15:40:00 -0500</pubDate>
+      <guid>https://tech-explained.github.io/blogs/typescript-explained.html</guid>
+    </item>
+    
+    <item>
+      <title>GraphQL: Think Custom Menu</title>
+      <link>https://tech-explained.github.io/blogs/graphql-explained.html</link>
+      <description>GraphQL is a query language for APIs. Think of it as a custom menu - order exactly what you want, nothing more, nothing less.</description>
+      <pubDate>Sat, 07 Dec 2025 15:35:00 -0500</pubDate>
+      <guid>https://tech-explained.github.io/blogs/graphql-explained.html</guid>
+    </item>
+    
+    <item>
+      <title>Async/Await: Think Ordering Food</title>
+      <link>https://tech-explained.github.io/blogs/async-explained.html</link>
+      <description>Async/Await handles operations that take time. Think of it as ordering food - you don't stand frozen waiting, you do other things until it's ready.</description>
+      <pubDate>Sat, 07 Dec 2025 15:30:00 -0500</pubDate>
+      <guid>https://tech-explained.github.io/blogs/async-explained.html</guid>
+    </item>
+    
+    <item>
+      <title>JSON: Think Labeled Boxes</title>
+      <link>https://tech-explained.github.io/blogs/json-explained.html</link>
+      <description>JSON (JavaScript Object Notation) is a format for storing and exchanging data. Think of it as labeled storage boxes - organized, readable, and easy to transport.</description>
+      <pubDate>Sat, 07 Dec 2025 15:25:00 -0500</pubDate>
+      <guid>https://tech-explained.github.io/blogs/json-explained.html</guid>
+    </item>
+    
+    <item>
+      <title>NPM: Think App Store</title>
+      <link>https://tech-explained.github.io/blogs/npm-explained.html</link>
+      <description>NPM (Node Package Manager) manages JavaScript libraries. Think of it as the App Store for code - download and install pre-built tools instead of building everything yourself.</description>
+      <pubDate>Sat, 07 Dec 2025 15:20:00 -0500</pubDate>
+      <guid>https://tech-explained.github.io/blogs/npm-explained.html</guid>
+    </item>
+    
+    <item>
+      <title>Encryption: Think Secret Code</title>
+      <link>https://tech-explained.github.io/blogs/encryption-explained.html</link>
+      <description>Encryption scrambles data so only authorized people can read it. Think of it as a secret code - only those with the key can decode the message.</description>
+      <pubDate>Sat, 07 Dec 2025 15:15:00 -0500</pubDate>
+      <guid>https://tech-explained.github.io/blogs/encryption-explained.html</guid>
+    </item>
+  </channel>
+</rss>
