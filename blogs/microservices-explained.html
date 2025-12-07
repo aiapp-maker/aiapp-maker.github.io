@@ -1,35 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microservices Explained - Tech Made Simple</title>
-        <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .back-button { display: inline-block; color: white; text-decoration: none; margin-bottom: 1rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.2); border-radius: 5px; transition: background 0.3s; }
-        .back-button:hover { background: rgba(255,255,255,0.3); }
-        h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .post-meta { opacity: 0.9; font-size: 1rem; }
-        article { background: white; padding: 3rem 2rem; margin: 2rem 0; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        .hero-icon { text-align: center; font-size: 100px; margin: 2rem 0; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; }
-        h2 { color: #667eea; margin: 2rem 0 1rem 0; font-size: 1.8rem; }
-        p { margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8; }
-        .example-box { background: #f8f9fa; border-left: 4px solid #667eea; padding: 1.5rem; margin: 2rem 0; border-radius: 8px; }
-        .example-box strong { color: #667eea; display: block; margin-bottom: 0.5rem; font-size: 1.2rem; }
-        ul { margin: 1rem 0 1rem 2rem; }
-        li { margin: 0.75rem 0; font-size: 1.05rem; }
-        .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 2rem; }
-        .tag { background: #e8eafc; color: #667eea; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; }
-        footer { background: #333; color: white; text-align: center; padding: 2rem 0; margin-top: 3rem; }
-    </style>
+    <title>Microservices - Tech Made Simple</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
 
-    <main class="container">
-        <article>
+<body>
     <header>
         <div class="container">
             <a href="../index.html" class="back-button">← Back to Home</a>
@@ -38,19 +18,30 @@
         </div>
     </header>
 
+    <main class="container">
+        <article>
+            <img src="../images/microservices_illustration_1765092070476.png" alt="Food Court vs Kitchen comparison"
+                class="hero-image">
 
             <div class="post-content">
                 <h2>The Restaurant Analogy</h2>
                 <p>Imagine two types of restaurants:</p>
-                
-                <p><strong>Traditional Restaurant (Monolithic):</strong> One huge kitchen where the head chef handles everything - appetizers, main courses, desserts, and drinks. If the chef gets overwhelmed or the pizza oven breaks, the entire restaurant slows down or shuts down.</p>
 
-                <p><strong>Food Court (Microservices):</strong> Separate specialized stations - a pizza place, a sushi bar, a dessert shop, and a coffee stand. Each operates independently. If the pizza oven breaks, you can still get sushi, dessert, and coffee. Each station can expand or reduce staff based on demand.</p>
+                <p><strong>Traditional Restaurant (Monolithic):</strong> One huge kitchen where the head chef handles
+                    everything - appetizers, main courses, desserts, and drinks. If the chef gets overwhelmed or the
+                    pizza oven breaks, the entire restaurant slows down or shuts down.</p>
 
-                <p><strong>That's microservices</strong> - breaking down a large application into smaller, independent services that work together.</p>
+                <p><strong>Food Court (Microservices):</strong> Separate specialized stations - a pizza place, a sushi
+                    bar, a dessert shop, and a coffee stand. Each operates independently. If the pizza oven breaks, you
+                    can still get sushi, dessert, and coffee. Each station can expand or reduce staff based on demand.
+                </p>
+
+                <p><strong>That's microservices</strong> - breaking down a large application into smaller, independent
+                    services that work together.</p>
 
                 <h2>What Are Microservices?</h2>
-                <p>Microservices are an architectural style where an application is built as a collection of small, independent services. Each service:</p>
+                <p>Microservices are an architectural style where an application is built as a collection of small,
+                    independent services. Each service:</p>
                 <ul>
                     <li>Does one specific job really well</li>
                     <li>Can be developed and deployed independently</li>
@@ -59,15 +50,17 @@
                 </ul>
 
                 <h2>Monolithic vs Microservices</h2>
-                
+
                 <h3>🏛️ Monolithic Architecture</h3>
                 <p>Imagine a Swiss Army knife - everything is built into one tool:</p>
                 <ul>
                     <li><strong>All code in one codebase</strong></li>
                     <li><strong>Deploys as a single unit</strong></li>
                     <li><strong>Shares one database</strong></li>
-                    <li><strong>Pros:</strong> Simple to develop initially, easy to test, straightforward deployment</li>
-                    <li><strong>Cons:</strong> Hard to scale specific features, one bug can crash everything, difficult to update without affecting the whole system</li>
+                    <li><strong>Pros:</strong> Simple to develop initially, easy to test, straightforward deployment
+                    </li>
+                    <li><strong>Cons:</strong> Hard to scale specific features, one bug can crash everything, difficult
+                        to update without affecting the whole system</li>
                 </ul>
 
                 <h3>🧩 Microservices Architecture</h3>
@@ -76,16 +69,21 @@
                     <li><strong>Multiple small codebases</strong></li>
                     <li><strong>Each service deploys independently</strong></li>
                     <li><strong>Each service can have its own database</strong></li>
-                    <li><strong>Pros:</strong> Scale individual services, use different tech for different needs, isolated failures, faster development</li>
-                    <li><strong>Cons:</strong> More complex to set up, requires good coordination, network communication overhead</li>
+                    <li><strong>Pros:</strong> Scale individual services, use different tech for different needs,
+                        isolated failures, faster development</li>
+                    <li><strong>Cons:</strong> More complex to set up, requires good coordination, network communication
+                        overhead</li>
                 </ul>
 
                 <h2>Real-World Example: E-Commerce Platform</h2>
-                <p>Let's say you're building an online store like Amazon. In a microservices architecture, you might have:</p>
+                <p>Let's say you're building an online store like Amazon. In a microservices architecture, you might
+                    have:</p>
 
                 <ul>
-                    <li>🛍️ <strong>Product Catalog Service:</strong> Manages product listings, descriptions, images</li>
-                    <li>🛒 <strong>Shopping Cart Service:</strong> Handles adding/removing items, calculating totals</li>
+                    <li>🛍️ <strong>Product Catalog Service:</strong> Manages product listings, descriptions, images
+                    </li>
+                    <li>🛒 <strong>Shopping Cart Service:</strong> Handles adding/removing items, calculating totals
+                    </li>
                     <li>💳 <strong>Payment Service:</strong> Processes credit cards, PayPal, etc.</li>
                     <li>📦 <strong>Shipping Service:</strong> Calculates shipping costs, tracks packages</li>
                     <li>👤 <strong>User Service:</strong> Manages accounts, profiles, authentication</li>
@@ -102,14 +100,16 @@
 Payment Service → Cart Service: "Payment successful! Transaction ID: 12345"</pre>
 
                 <h3>📢 Message Queues</h3>
-                <p>Like leaving sticky notes on a bulletin board - Service A posts a message, Service B picks it up when ready.</p>
+                <p>Like leaving sticky notes on a bulletin board - Service A posts a message, Service B picks it up when
+                    ready.</p>
                 <pre>Order Service: "New order #5678 created" (posted to queue)
 Shipping Service: (picks up message) "I'll handle this order"</pre>
 
                 <h2>Benefits of Microservices</h2>
 
                 <h3>🚀 Independent Scaling</h3>
-                <p><strong>Scenario:</strong> Black Friday sale - shopping cart service is overwhelmed, but product catalog is fine.</p>
+                <p><strong>Scenario:</strong> Black Friday sale - shopping cart service is overwhelmed, but product
+                    catalog is fine.</p>
                 <ul>
                     <li><strong>Monolithic:</strong> Must scale the entire application (expensive and wasteful)</li>
                     <li><strong>Microservices:</strong> Only scale the cart service (efficient and cost-effective)</li>
@@ -125,7 +125,8 @@ Shipping Service: (picks up message) "I'll handle this order"</pre>
                 </ul>
 
                 <h3>🛡️ Fault Isolation</h3>
-                <p>If the review service crashes, customers can still browse products, add to cart, and checkout. Only the reviews are temporarily unavailable.</p>
+                <p>If the review service crashes, customers can still browse products, add to cart, and checkout. Only
+                    the reviews are temporarily unavailable.</p>
 
                 <h3>👥 Team Autonomy</h3>
                 <p>Different teams can own different services:</p>
@@ -137,21 +138,26 @@ Shipping Service: (picks up message) "I'll handle this order"</pre>
                 </ul>
 
                 <h3>⌛ Faster Updates</h3>
-                <p>Update the recommendation algorithm without redeploying the entire application. Push changes to production multiple times a day if needed.</p>
+                <p>Update the recommendation algorithm without redeploying the entire application. Push changes to
+                    production multiple times a day if needed.</p>
 
                 <h2>Challenges of Microservices</h2>
 
                 <h3>🧑‍💻 Increased Complexity</h3>
-                <p>Instead of debugging one application, you're managing dozens of services, their interactions, and network issues.</p>
+                <p>Instead of debugging one application, you're managing dozens of services, their interactions, and
+                    network issues.</p>
 
                 <h3>📊 Monitoring & Debugging</h3>
-                <p>Tracking a user request across 10 different services is like following a delivery package through multiple warehouses and trucks.</p>
+                <p>Tracking a user request across 10 different services is like following a delivery package through
+                    multiple warehouses and trucks.</p>
 
                 <h3>🔐 Security</h3>
-                <p>More services mean more attack surfaces. Each service needs proper authentication and authorization.</p>
+                <p>More services mean more attack surfaces. Each service needs proper authentication and authorization.
+                </p>
 
                 <h3>👾 Data Consistency</h3>
-                <p>When services have separate databases, keeping data in sync is challenging. If a payment succeeds but the order service fails, you need strategies to handle this.</p>
+                <p>When services have separate databases, keeping data in sync is challenging. If a payment succeeds but
+                    the order service fails, you need strategies to handle this.</p>
 
                 <h2>When to Use Microservices</h2>
 
@@ -174,26 +180,36 @@ Shipping Service: (picks up message) "I'll handle this order"</pre>
 
                 <h2>Real Companies Using Microservices</h2>
                 <ul>
-                    <li>🎬 <strong>Netflix:</strong> Runs over 1000 microservices to handle streaming, recommendations, billing, etc.</li>
+                    <li>🎬 <strong>Netflix:</strong> Runs over 1000 microservices to handle streaming, recommendations,
+                        billing, etc.</li>
                     <li>🛒 <strong>Uber:</strong> Uses microservices for rider matching, payments, maps, and more</li>
-                    <li>📦 <strong>Amazon:</strong> Pioneered microservices - each team owns services from database to UI</li>
-                    <li>🎵 <strong>Spotify:</strong> Microservices allow them to release new features multiple times per day</li>
+                    <li>📦 <strong>Amazon:</strong> Pioneered microservices - each team owns services from database to
+                        UI</li>
+                    <li>🎵 <strong>Spotify:</strong> Microservices allow them to release new features multiple times per
+                        day</li>
                 </ul>
 
                 <h2>Supporting Technologies</h2>
                 <ul>
                     <li><strong>Docker:</strong> Packages each microservice into containers</li>
                     <li><strong>Kubernetes:</strong> Manages and orchestrates containers at scale</li>
-                    <li><strong>API Gateways:</strong> Single entry point that routes requests to appropriate services</li>
-                    <li><strong>Service Mesh:</strong> Handles service-to-service communication, security, and monitoring</li>
+                    <li><strong>API Gateways:</strong> Single entry point that routes requests to appropriate services
+                    </li>
+                    <li><strong>Service Mesh:</strong> Handles service-to-service communication, security, and
+                        monitoring</li>
                 </ul>
 
                 <h2>The Bottom Line</h2>
-                <p><strong>Microservices are like moving from a one-person band to an orchestra.</strong> Each musician (service) specializes in their instrument and can practice independently, but they all play together to create beautiful music (a working application).</p>
-                
-                <p>While microservices add complexity, they provide flexibility, scalability, and resilience that large, growing applications need. For small projects, a monolith is often simpler and better. But as your application and team grow, microservices become increasingly valuable.</p>
+                <p><strong>Microservices are like moving from a one-person band to an orchestra.</strong> Each musician
+                    (service) specializes in their instrument and can practice independently, but they all play together
+                    to create beautiful music (a working application).</p>
 
-                <p>The key is understanding your needs and choosing the right architecture for your situation, not just following trends.</p>
+                <p>While microservices add complexity, they provide flexibility, scalability, and resilience that large,
+                    growing applications need. For small projects, a monolith is often simpler and better. But as your
+                    application and team grow, microservices become increasingly valuable.</p>
+
+                <p>The key is understanding your needs and choosing the right architecture for your situation, not just
+                    following trends.</p>
             </div>
 
             <div class="tags">
@@ -211,4 +227,5 @@ Shipping Service: (picks up message) "I'll handle this order"</pre>
         </div>
     </footer>
 </body>
+
 </html>

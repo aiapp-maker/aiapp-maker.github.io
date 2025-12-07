@@ -1,49 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithms - Tech Made Simple</title>
-        <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; }
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .back-button { display: inline-block; color: white; text-decoration: none; margin-bottom: 1rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.2); border-radius: 5px; transition: background 0.3s; }
-        .back-button:hover { background: rgba(255,255,255,0.3); }
-        h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .post-meta { opacity: 0.9; font-size: 1rem; }
-        article { background: white; padding: 3rem 2rem; margin: 2rem 0; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        .hero-icon { text-align: center; font-size: 100px; margin: 2rem 0; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; }
-        h2 { color: #667eea; margin: 2rem 0 1rem 0; font-size: 1.8rem; }
-        p { margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8; }
-        .example-box { background: #f8f9fa; border-left: 4px solid #667eea; padding: 1.5rem; margin: 2rem 0; border-radius: 8px; }
-        .example-box strong { color: #667eea; display: block; margin-bottom: 0.5rem; font-size: 1.2rem; }
-        ul { margin: 1rem 0 1rem 2rem; }
-        li { margin: 0.75rem 0; font-size: 1.05rem; }
-        .tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 2rem; }
-        .tag { background: #e8eafc; color: #667eea; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; }
-        footer { background: #333; color: white; text-align: center; padding: 2rem 0; margin-top: 3rem; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
 
     <main class="container">
         <article>
-    <header>
-        <div class="container">
-            <a href="../index.html" class="back-button">← Back to Home</a>
-            <h1>Algorithms: Following a Recipe 🎂</h1>
-            <p class="post-meta">December 7, 2025 | 6 min read</p>
-        </div>
-    </header>
+            <header>
+                <div class="container">
+                    <a href="../index.html" class="back-button">← Back to Home</a>
+                    <h1>Algorithms: Following a Recipe 🎂</h1>
+                    <p class="post-meta">December 7, 2025 | 6 min read</p>
+                </div>
+            </header>
 
+            <img src="../images/algorithms_illustration_1765092105112.png" alt="Recipe card steps" class="hero-image">
 
             <div class="post-content">
                 <h2>What is an Algorithm?</h2>
-                <p>Algorithms sound scary, but they're just step-by-step instructions - like following a recipe to bake a cake.</p>
+                <p>Algorithms sound scary, but they're just step-by-step instructions - like following a recipe to bake
+                    a cake.</p>
 
-                <p><strong>An algorithm is a set of instructions to solve a problem or complete a task.</strong> Every time you follow a recipe, assemble IKEA furniture, or use GPS directions, you're following an algorithm.</p>
+                <p><strong>An algorithm is a set of instructions to solve a problem or complete a task.</strong> Every
+                    time you follow a recipe, assemble IKEA furniture, or use GPS directions, you're following an
+                    algorithm.</p>
 
                 <h2>The Cake Recipe Analogy</h2>
                 <p>Baking a chocolate cake is an algorithm:</p>
@@ -60,7 +47,8 @@
                 <h2>Algorithms in Everyday Life</h2>
                 <ul>
                     <li>🗺️ <strong>GPS Navigation:</strong> Algorithm finds shortest route to your destination</li>
-                    <li>🔍 <strong>Google Search:</strong> Algorithm ranks billions of web pages to show best results</li>
+                    <li>🔍 <strong>Google Search:</strong> Algorithm ranks billions of web pages to show best results
+                    </li>
                     <li>🎬 <strong>Netflix:</strong> Algorithm recommends movies you might like</li>
                     <li>📱 <strong>Instagram Feed:</strong> Algorithm decides which posts to show you first</li>
                 </ul>
@@ -89,20 +77,22 @@
                 <h2>Famous Algorithms</h2>
 
                 <h3>🔍 Binary Search</h3>
-                <p>Like finding a word in a dictionary - open to the middle, decide if your word is before or after, repeat.</p>
+                <p>Like finding a word in a dictionary - open to the middle, decide if your word is before or after,
+                    repeat.</p>
 
                 <h3>📊 Sorting Algorithms</h3>
-                <p>Like organizing a deck of cards from lowest to highest. Different methods: bubble sort, quick sort, merge sort.</p>
+                <p>Like organizing a deck of cards from lowest to highest. Different methods: bubble sort, quick sort,
+                    merge sort.</p>
 
                 <h3>🎯 Recommendation Algorithms</h3>
                 <p>Netflix and Spotify analyze what you've watched/listened to and suggest similar content.</p>
 
                 <h2>Good vs Bad Algorithms</h2>
                 <p><strong>Bad Algorithm (Inefficient):</strong><br>
-To find a book in a library, check every single book one by one.</p>
+                    To find a book in a library, check every single book one by one.</p>
 
                 <p><strong>Good Algorithm (Efficient):</strong><br>
-Use the library's catalog system to go directly to the right shelf.</p>
+                    Use the library's catalog system to go directly to the right shelf.</p>
 
                 <p>Both find the book, but the good algorithm is much faster!</p>
 
@@ -115,7 +105,9 @@ Use the library's catalog system to go directly to the right shelf.</p>
                 </ul>
 
                 <h2>The Bottom Line</h2>
-                <p><strong>Algorithms are everywhere, quietly making our digital lives work.</strong> Every app you use, every website you visit, and every smart device in your home relies on algorithms - step-by-step instructions that solve problems efficiently.</p>
+                <p><strong>Algorithms are everywhere, quietly making our digital lives work.</strong> Every app you use,
+                    every website you visit, and every smart device in your home relies on algorithms - step-by-step
+                    instructions that solve problems efficiently.</p>
                 <p>Next time someone mentions algorithms, just think: "Oh, like a recipe!"</p>
             </div>
 
@@ -133,4 +125,5 @@ Use the library's catalog system to go directly to the right shelf.</p>
         </div>
     </footer>
 </body>
+
 </html>
