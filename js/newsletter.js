@@ -130,7 +130,7 @@ class NewsletterManager {
     async subscribeViaFormspree(email) {
         // Replace YOUR_FORM_ID with your actual Formspree form ID
         // Get it from: https://formspree.io (free signup)
-        const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+        const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xyzrdkwe';
 
         const response = await fetch(FORMSPREE_ENDPOINT, {
             method: 'POST',
