@@ -1,0 +1,209 @@
+/* Psychological Engagement Styles */
+
+/* Remove stats styles and add engagement styles */
+.stats-grid {
+    display: none;
+    /* Hide old stats */
+}
+
+/* Engagement Section */
+.engagement-section {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    text-align: center;
+}
+
+/* Testimonial Carousel */
+.testimonial-carousel {
+    margin-bottom: 2.5rem;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s ease;
+    display: none;
+}
+
+.testimonial.active {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.testimonial-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+    font-style: italic;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Learning Path Preview */
+.learning-path-preview {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+.learning-prompt {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.quick-topics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.topic-pill {
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+    animation: slideIn 0.5s ease-out backwards;
+}
+
+.topic-pill:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.topic-pill:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.topic-pill:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.topic-pill:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.topic-pill.gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+    animation-delay: 0.6s;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.topic-pill:hover:not(.gradient) {
+    transform: translateY(-2px);
+    border-color: #667eea;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.arrow {
+    font-size: 1.5rem;
+    color: #667eea;
+    animation: pulse 2s infinite;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/* Rotating Testimonials */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark Mode */
+[data-theme="dark"] .testimonial-text {
+    color: var(--text-main);
+}
+
+[data-theme="dark"] .learning-path-preview {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+[data-theme="dark"] .topic-pill {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonial-text {
+        font-size: 1.25rem;
+    }
+
+    .learning-path-preview {
+        padding: 1.5rem;
+    }
+
+    .quick-topics {
+        gap: 0.5rem;
+    }
+
+    .topic-pill {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .arrow {
+        display: none;
+    }
+}
