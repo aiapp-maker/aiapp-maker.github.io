@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/advanced-features.css">
     <link rel="stylesheet" href="css/landing.css">
     <link rel="stylesheet" href="css/newsletter.css">
+    <link rel="stylesheet" href="css/visuals.css">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -27,6 +28,14 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background"></div>
+        <div class="floating-icons">
+            <div class="floating-icon">💡</div>
+            <div class="floating-icon">🚀</div>
+            <div class="floating-icon">⚡</div>
+            <div class="floating-icon">🎯</div>
+            <div class="floating-icon">📚</div>
+            <div class="floating-icon">🌟</div>
+        </div>
         <div class="container hero-content">
             <div class="hero-badge">✨ 50+ Articles</div>
             <h1 class="hero-title">Learn Tech, <span class="gradient-text">Simply</span></h1>
@@ -34,7 +43,7 @@
                 jargon, just clear explanations.</p>
             <div class="hero-cta">
                 <a href="#articles" class="btn btn-primary">Browse Articles</a>
-                <a href="rss.xml" class="btn btn-secondary">Subscribe</a>
+                <a href="#newsletter" class="btn btn-secondary">Get Updates</a>
             </div>
 
             <!-- Stats -->
@@ -58,6 +67,36 @@
             </div>
         </div>
     </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Learn Here?</h2>
+            <p class="section-subtitle">Everything you need to master software engineering</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Simple Analogies</h3>
+                    <p class="feature-description">Complex concepts explained through everyday examples you already
+                        understand</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Visual Learning</h3>
+                    <p class="feature-description">Custom illustrations and diagrams to help you grasp concepts faster
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Quick Reads</h3>
+                    <p class="feature-description">Bite-sized articles that respect your time - learn in minutes, not
+                        hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider container"></div>
 
     <!-- Featured Topics -->
     <section class="featured-topics">
@@ -1028,7 +1067,7 @@
     </main>
 
     <!-- Newsletter Section -->
-    <section class="newsletter-section container">
+    <section id="newsletter" class="newsletter-section container">
         <div class="newsletter-content">
             <div class="newsletter-icon">📬</div>
             <h2 class="newsletter-title">Stay Updated</h2>
